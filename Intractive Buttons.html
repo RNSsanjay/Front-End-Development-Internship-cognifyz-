@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funky Webpage with Unique Design </title>
+<style>
+  /* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #8107c8;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-section {
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  background-color: #8107c8;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature-section h2,
+.animation-section h2 {
+  margin-bottom: 10px;
+}
+
+.feature-section .buttons-container,
+.animation-section .buttons-container {
+  display: flex;
+}
+
+
+
+.separator {
+  width: 1px;
+  background-color: white;
+  height: 100%;
+  margin: 0 20px;
+}
+
+/* Animation Classes */
+@keyframes bounce {
+  from, to {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.bounce-animation {
+  animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes shake {
+  from, to {
+    transform: translateX(0);
+  }
+  25%, 75% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+.shake-animation {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-animation {
+  animation: fade 1s infinite alternate;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.zoom-animation {
+  animation: zoom 1s infinite alternate;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-animation {
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.slide-out-animation {
+  animation: slideOut 1s forwards;
+}
+
+@keyframes flip {
+  from {
+    transform: perspective(400px) rotateY(0);
+  }
+  to {
+    transform: perspective(400px) rotateY(360deg);
+  }
+}
+
+.flip-animation {
+  animation: flip 1s forwards;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-animation {
+  animation: spin 1s infinite linear;
+}
+
+/* styles.css */
+
+/* Header Fade-in Animation */
+.fade-in-header {
+  opacity: 0;
+  animation: fadeInHeader 1s forwards;
+}
+
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Content Fade-in Animation */
+.fade-in-content {
+  opacity: 0;
+  animation: fadeInContent 1s forwards;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button Hover Animation */
+.buttons-container button {
+  padding: 10px 20px;
+  background-color: whitesmoke;
+  color: rgb(5, 5, 5);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: transform 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.buttons-container button:hover {
+  transform: scale(1.05);
+  background-color: rgb(161, 19, 238);
+  color: rgb(244, 237, 237);
+}
+
+/* styles.css */
+
+/* Header Fade-in Animation */
+.fade-in-header {
+  opacity: 0;
+  animation: fadeInHeader 1s forwards;
+}
+
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Content Fade-in Animation */
+.fade-in-content {
+  opacity: 0;
+  animation: fadeInContent 1s forwards;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer Fade-in Animation */
+.fade-in-footer {
+  opacity: 0;
+  animation: fadeInFooter 1s forwards;
+}
+
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Button Hover Animation */
+.buttons-container button {
+  padding: 10px 20px;
+  background-color: #f5f3f5;
+  color: rgb(8, 7, 7);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.buttons-container button:hover {
+  transform: scale(1.05);
+}
+
+/* styles.css */
+
+/* Header Fade-in Animation */
+.fade-in-header {
+  opacity: 0;
+  animation: fadeInHeader 1s forwards;
+}
+
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Content Fade-in Animation */
+.fade-in-content {
+  opacity: 0;
+  animation: fadeInContent 1s forwards;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer Fade-in Animation */
+.fade-in-footer {
+  opacity: 0;
+  animation: fadeInFooter 1s forwards;
+}
+
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Button Hover Animation */
+.buttons-container button {
+  padding: 10px 20px;
+  background-color: #55c57a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.buttons-container button:hover {
+  transform: scale(1.05);
+}
+
+/* Sample Text Input */
+.sample-text-input {
+  width: 1200px;
+  height: 100px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none;
+}
+/* styles.css */
+
+/* Header Fade-in Animation */
+.fade-in-header {
+  opacity: 0;
+  animation: fadeInHeader 1s forwards;
+}
+
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Content Fade-in Animation */
+.fade-in-content {
+  opacity: 0;
+  animation: fadeInContent 1s forwards;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer Fade-in Animation */
+.fade-in-footer {
+  opacity: 0;
+  animation: fadeInFooter 1s forwards;
+}
+
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Button Hover Animation */
+.buttons-container button {
+  padding: 10px 20px;
+  background-color: #55c57a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.buttons-container button:hover {
+  transform: scale(1.05);
+}
+
+/* Sample Text Input */
+
+</style>  
+</head>
+<body>
+  <header class="fade-in-header">
+    <pre><h1>Welcome to Wepage With Many JS Action Button [Level - 2 (Task 4)].</h1></pre>
+  </header>
+  <main class="fade-in-content">
+    <section class="content-section">
+      <h2>Input Content :</h2>
+      <textarea id="sampleTextInput" class="sample-text-input" placeholder="Enter your text here"></textarea>
+    </section>
+  </main>
+
+  <footer>
+    <section class="feature-section">
+      <h2>Features</h2>
+      <div class="buttons-container">
+        <button id="changeTextColor">Change Text Color</button>
+        <button id="changeBgColor">Change Background Color</button>
+        <button id="changeTextSize">Change Text Size</button>
+        <button id="changeTextStyle">Change Text Style</button>
+        <button id="resetButton">Reset</button>
+      </div>
+    </section>
+    <div class="separator"></div>
+    <section class="animation-section">
+      <h2>Animations</h2>
+      <div class="buttons-container">
+        <button id="bounceButton">Bounce</button>
+        <button id="rotateButton">Rotate</button>
+        <button id="pulseButton">Pulse</button>
+        <button id="shakeButton">Shake</button>
+        <button id="fadeButton">Fade</button>
+        <button id="zoomButton">Zoom</button>
+        <button id="slideInButton">Slide In</button>
+        <button id="slideOutButton">Slide Out</button>
+        <button id="flipButton">Flip</button>
+        <button id="spinButton">Spin</button>
+      </div>
+    </section>
+  </footer>
+
+  <script>
+    // script.js
+
+document.addEventListener('DOMContentLoaded', function() {
+  const changeTextColorButton = document.getElementById('changeTextColor');
+  const changeBgColorButton = document.getElementById('changeBgColor');
+  const changeTextSizeButton = document.getElementById('changeTextSize');
+  const changeTextStyleButton = document.getElementById('changeTextStyle');
+  const resetButton = document.getElementById('resetButton');
+  const bounceButton = document.getElementById('bounceButton');
+  const rotateButton = document.getElementById('rotateButton');
+  const pulseButton = document.getElementById('pulseButton');
+  const shakeButton = document.getElementById('shakeButton');
+  const fadeButton = document.getElementById('fadeButton');
+  const zoomButton = document.getElementById('zoomButton');
+  const slideInButton = document.getElementById('slideInButton');
+  const slideOutButton = document.getElementById('slideOutButton');
+  const flipButton = document.getElementById('flipButton');
+  const spinButton = document.getElementById('spinButton');
+  const sampleText = document.getElementById('sampleTextInput');
+
+  changeTextColorButton.addEventListener('click', function() {
+    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    sampleText.style.color = randomColor;
+  });
+
+  changeBgColorButton.addEventListener('click', function() {
+    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    document.body.style.backgroundColor = randomColor;
+  });
+
+  changeTextSizeButton.addEventListener('click', function() {
+    const randomSize = Math.floor(Math.random() * 40) + 10; // Random size between 10 and 50px
+    sampleText.style.fontSize = randomSize + 'px';
+  });
+
+  changeTextStyleButton.addEventListener('click', function() {
+    const styles = ['normal', 'italic', 'oblique'];
+    const randomStyle = styles[Math.floor(Math.random() * styles.length)];
+    sampleText.style.fontStyle = randomStyle;
+  });
+
+  resetButton.addEventListener('click', function() {
+    sampleText.style.color = '';
+    document.body.style.backgroundColor = '';
+    sampleText.style.fontSize = '';
+    sampleText.style.fontStyle = '';
+    sampleText.classList.remove('slide-in-animation', 'slide-out-animation', 'flip-animation', 'spin-animation', 'bounce-animation', 'rotate-animation', 'pulse-animation', 'shake-animation', 'fade-animation', 'zoom-animation');
+  });
+
+  bounceButton.addEventListener('click', function() {
+    sampleText.classList.remove('rotate-animation', 'pulse-animation', 'shake-animation', 'fade-animation', 'zoom-animation', 'slide-in-animation', 'slide-out-animation', 'flip-animation', 'spin-animation');
+    sampleText.classList.toggle('bounce-animation');
+  });
+
+  rotateButton.addEventListener('click', function() {
+    sampleText.classList.remove('bounce-animation', 'pulse-animation', 'shake-animation', 'fade-animation', 'zoom-animation', 'slide-in-animation', 'slide-out-animation', 'flip-animation', 'spin-animation');
+    sampleText.classList.toggle('rotate-animation');
+  });
+
+  pulseButton.addEventListener('click', function() {
+    sampleText.classList.remove('bounce-animation', 'rotate-animation', 'shake-animation', 'fade-animation', 'zoom-animation', 'slide-in-animation', 'slide-out-animation', 'flip-animation', 'spin-animation');
+    sampleText.classList.toggle('pulse-animation');
+  });
+
+  shakeButton.addEventListener('click', function() {
+    sampleText.classList.remove('bounce-animation', 'rotate-animation', 'pulse-animation', 'fade-animation', 'zoom-animation', 'slide-in-animation', 'slide-out-animation', 'flip-animation', 'spin-animation');
+    sampleText.classList.toggle('shake-animation');
+  });
+
+  fadeButton.addEventListener('click', function() {
+    sampleText.classList.remove('bounce-animation', 'rotate-animation', 'pulse-animation', 'shake-animation', 'zoom-animation', 'slide-in-animation', 'slide-out-animation', 'flip-animation', 'spin-animation');
+    sampleText.classList.toggle('fade-animation');
+  });
+
+  zoomButton.addEventListener('click', function() {
+    sampleText.classList.remove('bounce-animation', 'rotate-animation', 'pulse-animation', 'shake-animation', 'fade-animation', 'slide-in-animation', 'slide-out-animation', 'flip-animation', 'spin-animation');
+    sampleText.classList.toggle('zoom-animation');
+  });
+
+  slideInButton.addEventListener('click', function() {
+    sampleText.classList.remove('bounce-animation', 'rotate-animation', 'pulse-animation', 'shake-animation', 'fade-animation', 'zoom-animation', 'slide-out-animation', 'flip-animation', 'spin-animation');
+    sampleText.classList.toggle('slide-in-animation');
+  });
+
+  slideOutButton.addEventListener('click', function() {
+    sampleText.classList.remove('bounce-animation', 'rotate-animation', 'pulse-animation', 'shake-animation', 'fade-animation', 'zoom-animation', 'slide-in-animation', 'flip-animation', 'spin-animation');
+    sampleText.classList.toggle('slide-out-animation');
+  });
+
+  flipButton.addEventListener('click', function() {
+    sampleText.classList.remove('bounce-animation', 'rotate-animation', 'pulse-animation', 'shake-animation', 'fade-animation', 'zoom-animation', 'slide-in-animation', 'slide-out-animation', 'spin-animation');
+    sampleText.classList.toggle('flip-animation');
+  });
+
+  spinButton.addEventListener('click', function() {
+    sampleText.classList.remove('bounce-animation', 'rotate-animation', 'pulse-animation', 'shake-animation', 'fade-animation', 'zoom-animation', 'slide-in-animation', 'slide-out-animation', 'flip-animation');
+    sampleText.classList.toggle('spin-animation');
+  });
+
+  const sampleTextInput = document.getElementById('sampleTextInput');
+  sampleTextInput.addEventListener('input', function() {
+    sampleText.innerText = sampleTextInput.value;
+  });
+});
+
+  </script>
+</body>
+</html>
