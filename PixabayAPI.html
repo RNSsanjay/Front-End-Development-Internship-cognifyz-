@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixabay Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+        
+        .image-card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        header {
+            background-color: #a712eb;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+  <header><h1 style="text-align: center;">Pixabay Image Gallery By My Self</h1></header>
+    <div class="container" id="imageContainer"></div>
+
+    <script>
+        // Replace 'YOUR_API_KEY' with your actual Pixabay API key
+        const apiKey = '43247233-c641222494e8504538879f8b4';
+        const apiUrl = `https://pixabay.com/api/?key=${apiKey}&q=nature&per_page=12`;
+
+        async function fetchImages() {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                if (data.hits && data.hits.length > 0) {
+                    displayImages(data.hits);
+                } else {
+                    console.error('No images found');
+                }
+            } catch (error) {
+                console.error('Error fetching images:', error);
+            }
+        }
+
+        function displayImages(images) {
+            const container = document.getElementById('imageContainer');
+            container.innerHTML = '';
+            images.forEach(image => {
+                const card = document.createElement('div');
+                card.classList.add('image-card');
+                const img = document.createElement('img');
+                img.src = image.webformatURL;
+                img.alt = image.tags;
+                card.appendChild(img);
+                container.appendChild(card);
+            });
+        }
+
+        // Fetch images when the page loads
+        window.addEventListener('load', fetchImages);
+    </script>
+</body>
+</html>
