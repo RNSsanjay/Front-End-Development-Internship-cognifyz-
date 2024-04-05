@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique and Fun Webpage</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 2px;
+            text-align: center;
+            font-size: 32px;
+            border-bottom: 2px solid #333;
+            position: relative;
+            overflow: hidden;
+            animation: slideInDown 1s forwards;
+            border-radius: 10px;
+        }
+        @keyframes slideInDown {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        .footer {
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            font-size: 18px;
+            animation: bounceInUp 1s forwards;
+        }
+        @keyframes bounceInUp {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        #content {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .fadeIn {
+            animation-name: fadeIn;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #8f12e9;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #c9800a;
+            transform: scale(1.1);
+        }
+        .button:focus {
+            outline: none;
+        }
+        .content-item {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .fun-element {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .fun-element img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #333;
+            margin: 20px;
+            cursor: pointer;
+            transition: transform 0.5s, filter 0.5s;
+        }
+        .fun-element img:hover {
+            transform: rotate(360deg) scale(1.2);
+            filter: hue-rotate(180deg);
+        }
+        .fun-fact {
+            font-style: italic;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .bounce {
+            animation-name: bounce;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            animation: marquee 5s linear infinite;
+        }
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>Welcome to Fun Land [Level - 2 (Task 3)]</h1>
+    </header>
+    <div id="content">
+        <div class="content-item animated fadeIn">
+            <h2>This webpage is filled with Many Cartoon Characters. When You Click them You will move to Cartoon Videos... </h2>
+            <p>Click the buttons below to see special effects!</p>
+            <button id="colorButton" class="button">Change Background Color</button>
+            <button id="rotateButton" class="button">Rotate Fun Elements</button>
+            <button id="hideButton" class="button">Hide Fun Elements</button>
+            <p id="funFact" class="fun-fact" style="display: none;"></p>
+        </div>
+        <div class="fun-element">
+           <a href="https://www.youtube.com/results?search_query=tom+and+jerry"> <img src="https://media.giphy.com/media/10UeedrT5MIfPG/giphy.gif" alt="Tom & Jerry"></a>
+            <a href="https://www.youtube.com/results?search_query=kunfu+panda"><img src="https://media1.tenor.com/images/9fc9fa0ed4ad8077a9447b27296771f0/tenor.gif?itemid=4968318" alt="Kunfu Panda"></a>
+            <a href="https://www.youtube.com/results?search_query=miniyons+cartoon"><img src="https://i0.wp.com/wp-modula.com/wp-content/uploads/2018/12/gifgif.gif" alt="Miniyons"></a>
+           <a href="https://www.youtube.com/results?search_query=shinchan"> <img src="https://media1.tenor.com/images/49af2056717bdc97ea295b1329ad294b/tenor.gif" alt="Shinchan"></a>
+           <a href="https://www.youtube.com/results?search_query=motu+patlu+cartoon"> <img src="https://c.tenor.com/TEBOZFkwjzgAAAAC/bhagao-motu.gif" alt="Motu Pathulu"></a>
+            <a href="https://www.youtube.com/results?search_query=doremon"><img src="https://i.pinimg.com/originals/2a/97/d9/2a97d9f17862d77f4861c4c986d6de3a.gif" alt="Doremon"></a>
+          <a href="https://www.youtube.com/results?search_query=jacky+chan">  <img src="https://media.tenor.co/images/c6e8729eeeb0660f735f5f08815fb821/raw" alt="Jacky Chan"></a>
+        </div>
+        <div class="content-item animated fadeIn">
+            <pre><h3 class="marquee">Click the Above One of the Img to Watch that Catoon Videos...</h3></pre>
+        </div>
+    </div>
+    <div class="footer" id="footer">
+        <p>2024 - Created with ❤️ by Sanjay N | Studying @ SNS College of Technology </p>
+    </div>
+    <div style="position: fixed; top: 10px; right: 10px;">
+        <button class="button" id="headerColorButton">Change Header & Footer Color</button>
+    </div>
+
+    <script>
+        // Function to generate random RGB color
+        function getRandomColor() {
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            return "rgb(" + r + "," + g + "," + b + ")";
+        }
+
+        // Function to change background color
+        document.getElementById("colorButton").addEventListener("click", function() {
+            document.body.style.backgroundColor = getRandomColor();
+        });
+
+        // Function to change header and footer color
+        document.getElementById("headerColorButton").addEventListener("click", function() {
+            var color = getRandomColor(); // Generate a random color
+            document.querySelector("header").style.backgroundColor = color; // Set header background color
+            document.querySelector(".footer").style.backgroundColor = color; // Set footer background color
+        });
+
+        // Function to rotate fun elements
+        document.getElementById("rotateButton").addEventListener("click", function() {
+            var funElements = document.querySelectorAll(".fun-element img");
+            funElements.forEach(function(element) {
+                if (!element.dataset.rotation) {
+                    element.dataset.rotation = 0; // Initialize rotation data attribute
+                }
+                var rotation = parseInt(element.dataset.rotation) + 360; // Add 360 to the current rotation
+                element.style.transform = "rotate(" + rotation + "deg)"; // Apply rotation
+                element.dataset.rotation = rotation; // Update rotation data attribute
+            });
+        });
+
+        // Function to hide fun elements
+        document.getElementById("hideButton").addEventListener("click", function() {
+            var funElements = document.querySelectorAll(".fun-element img");
+            funElements.forEach(function(element) {
+                element.style.display = "none";
+            });
+            setTimeout(function() {
+                funElements.forEach(function(element) {
+                    element.style.display = "inline-block";
+                });
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
